@@ -21,7 +21,10 @@ const userSchema = new Schema(
         password: {
             type: String,
             required: [true, 'Password is required.']
-        }
+        },
+        listings: [{
+            type: Schema.Types.ObjectId, ref: 'Listing'
+        }]
     },
     {
         collection: 'users',
