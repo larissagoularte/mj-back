@@ -20,6 +20,7 @@ app.use(passport.initialize());
 DBconnect();
 
 app.use('/api/auth', authRoutes);
+app.use('/api/listings', authRoutes);
 
 app.get('/', (req, res) => {
     res.send('Welcome to MJMgmt API!');
